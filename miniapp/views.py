@@ -3,9 +3,13 @@ from django.http import HttpResponse
 from .models import ProductsList
 
 # Create your views here.
-def myapp(request):
+def miniapp(request):
     a=ProductsList.objects.all()
-    product={
+    print (a)
+    product= {
         'data':a
     }
     return render(request,'index.html',context=product)
+
+
+    
